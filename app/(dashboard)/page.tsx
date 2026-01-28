@@ -17,35 +17,35 @@ export default function DashboardHome() {
           marginTop: "2rem",
         }}
       >
-        <Link href="/(dashboard)/projects" passHref legacyBehavior>
-          <a style={cardStyle}>
+        <Link href="/(dashboard)/projects" style={{ textDecoration: "none" }}>
+          <div style={cardStyle} tabIndex={0} role="link">
             <h2>Projects</h2>
             <p>Track, organize, and monitor all active and completed projects.</p>
-          </a>
+          </div>
         </Link>
-        <Link href="/(dashboard)/clients" passHref legacyBehavior>
-          <a style={cardStyle}>
+        <Link href="/(dashboard)/clients" style={{ textDecoration: "none" }}>
+          <div style={cardStyle} tabIndex={0} role="link">
             <h2>Clients</h2>
             <p>Manage your client database and contact information.</p>
-          </a>
+          </div>
         </Link>
-        <Link href="/(dashboard)/teams" passHref legacyBehavior>
-          <a style={cardStyle}>
+        <Link href="/(dashboard)/teams" style={{ textDecoration: "none" }}>
+          <div style={cardStyle} tabIndex={0} role="link">
             <h2>Teams</h2>
             <p>Oversee agency teams and assign members to projects.</p>
-          </a>
+          </div>
         </Link>
-        <Link href="/(dashboard)/tasks" passHref legacyBehavior>
-          <a style={cardStyle}>
+        <Link href="/(dashboard)/tasks" style={{ textDecoration: "none" }}>
+          <div style={cardStyle} tabIndex={0} role="link">
             <h2>Tasks</h2>
             <p>See, update, and complete project-specific tasks.</p>
-          </a>
+          </div>
         </Link>
-        <Link href="/(dashboard)/settings" passHref legacyBehavior>
-          <a style={cardStyle}>
+        <Link href="/(dashboard)/settings" style={{ textDecoration: "none" }}>
+          <div style={cardStyle} tabIndex={0} role="link">
             <h2>Settings</h2>
             <p>Adjust agency-wide preferences and workspace configuration.</p>
-          </a>
+          </div>
         </Link>
       </div>
     </section>
@@ -54,6 +54,7 @@ export default function DashboardHome() {
 
 const cardStyle: React.CSSProperties = {
   display: "block",
+  cursor: "pointer",
   padding: "2rem",
   background: "#fafbfc",
   border: "1px solid #e5e7eb",
