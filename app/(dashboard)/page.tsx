@@ -4,7 +4,7 @@ export default function DashboardHome() {
   return (
     <section>
       <h1>Agency Project Management Dashboard</h1>
-      <p>Welcome! Select a section below to manage your agency's projects, clients, teams, and tasks.</p>
+      <p>Welcome! Select a section below to manage your agency's projects, clients, teams, tasks, and settings.</p>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "2rem", marginTop: "2rem" }}>
         <a href="/(dashboard)/projects" style={cardStyle}>
           <h2>Projects</h2>
@@ -21,6 +21,10 @@ export default function DashboardHome() {
         <a href="/(dashboard)/tasks" style={cardStyle}>
           <h2>Tasks</h2>
           <p>Track and update tasks for every project.</p>
+        </a>
+        <a href="/(dashboard)/settings" style={cardStyle}>
+          <h2>Settings</h2>
+          <p>Configure agency settings, workspace details, and preferences.</p>
         </a>
       </div>
     </section>
