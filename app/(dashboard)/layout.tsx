@@ -14,6 +14,7 @@ export default function DashboardLayout({
           <li><a href="/(dashboard)/clients">Clients</a></li>
           <li><a href="/(dashboard)/teams">Teams</a></li>
           <li><a href="/(dashboard)/tasks">Tasks</a></li>
+          <li><a href="/(dashboard)/settings">Settings</a></li>
         </ul>
       </nav>
       <main style={{ maxWidth: "1200px", margin: "2rem auto", padding: "2rem" }}>
