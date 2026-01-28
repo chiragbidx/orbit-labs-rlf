@@ -1,10 +1,14 @@
 import React from "react";
+import Link from "next/link";
 
 export default function DashboardHome() {
   return (
     <section>
       <h1>Agency Project Management Dashboard</h1>
-      <p>Welcome! Select a section below to manage your agency's projects, clients, teams, tasks, and settings.</p>
+      <p>
+        Welcome! Select a section below to manage your agency's projects, clients,
+        teams, tasks, and settings.
+      </p>
       <div
         style={{
           display: "grid",
@@ -13,26 +17,36 @@ export default function DashboardHome() {
           marginTop: "2rem",
         }}
       >
-        <a href="/(dashboard)/projects" style={cardStyle}>
-          <h2>Projects</h2>
-          <p>Track, organize, and monitor all active and completed projects.</p>
-        </a>
-        <a href="/(dashboard)/clients" style={cardStyle}>
-          <h2>Clients</h2>
-          <p>Manage your client database and contact information.</p>
-        </a>
-        <a href="/(dashboard)/teams" style={cardStyle}>
-          <h2>Teams</h2>
-          <p>Oversee agency teams and assign members to projects.</p>
-        </a>
-        <a href="/(dashboard)/tasks" style={cardStyle}>
-          <h2>Tasks</h2>
-          <p>See, update, and complete project-specific tasks.</p>
-        </a>
-        <a href="/(dashboard)/settings" style={cardStyle}>
-          <h2>Settings</h2>
-          <p>Adjust agency-wide preferences and workspace configuration.</p>
-        </a>
+        <Link href="/(dashboard)/projects" passHref legacyBehavior>
+          <a style={cardStyle}>
+            <h2>Projects</h2>
+            <p>Track, organize, and monitor all active and completed projects.</p>
+          </a>
+        </Link>
+        <Link href="/(dashboard)/clients" passHref legacyBehavior>
+          <a style={cardStyle}>
+            <h2>Clients</h2>
+            <p>Manage your client database and contact information.</p>
+          </a>
+        </Link>
+        <Link href="/(dashboard)/teams" passHref legacyBehavior>
+          <a style={cardStyle}>
+            <h2>Teams</h2>
+            <p>Oversee agency teams and assign members to projects.</p>
+          </a>
+        </Link>
+        <Link href="/(dashboard)/tasks" passHref legacyBehavior>
+          <a style={cardStyle}>
+            <h2>Tasks</h2>
+            <p>See, update, and complete project-specific tasks.</p>
+          </a>
+        </Link>
+        <Link href="/(dashboard)/settings" passHref legacyBehavior>
+          <a style={cardStyle}>
+            <h2>Settings</h2>
+            <p>Adjust agency-wide preferences and workspace configuration.</p>
+          </a>
+        </Link>
       </div>
     </section>
   );
