@@ -28,12 +28,13 @@ export async function middleware(request: NextRequest) {
         }),
         httpOnly: true,
         secure: true,
-        sameSite: 'lax',
-        expires: expiresInOneDay
+        sameSite: 'none',
+        expires: expiresInOneDay,
+        path: '/'
       });
     } catch (error) {
       console.error('Error updating session:', error);
-      res.cookies.delete('session');
+      res.cookies.delete('session', { path: '/' });
       if (isProtectedRoute) {
         return NextResponse.redirect(new URL('/sign-in', request.url));
       }
